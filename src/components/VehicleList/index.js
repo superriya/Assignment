@@ -12,7 +12,7 @@ export default function VehicleList() {
   const getModalData = (emissions, passengers, drivetrain, bodystyles) => {
     const temData = [emissions, passengers, drivetrain, bodystyles];
     // console.warn(temData);
-    setTempdata((item) => [1, ...temData]);
+    setTempdata(() => [1, ...temData]);
     return setModel(true);
   };
   // modal-implementation-end
