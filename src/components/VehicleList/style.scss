@@ -55,6 +55,7 @@ body {
     letter-spacing: 0.8px;
     width: 300px;
     margin: 0 auto;
+    min-height: 75px;
   }
 
   // mobile-view
@@ -95,32 +96,112 @@ body {
   }
 
   // modal-react
-  .vehicleDetails__modal {
+  .vehicleDetails__btn {
     width: 300px;
     margin: 0 auto;
     text-align: right;
   }
 
+  }
+  .vehicleDetails--readmore-btn {
+    border: 0;
+    border-radius: 3px;
+    padding: 8px 18px;
+    color: #000000;
+    cursor: pointer;
+    background: #8e898912;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: .5px;
+  }
+  .vehicleDetails__btn.moview {
+    width: 100%;
+  }
+  .vehicleDetails--readmore-btn.moview {
+    background: transparent;
+    font-size: 12px;
+    margin: 0;
+    padding: 10px 0;
+  }
+
+//***************
+.modalApp {
+  // text-align: center;
+  padding-top: 2rem;
 }
-.vehicleDetails__modal--btn {
-  border: 0;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1040;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000d1;
+  // opacity: .8;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1050;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  outline: 0;
+}
+
+.modal {
+  z-index: 100;
+  background: white;
+  position: relative;
+  margin: 1.75rem auto;
   border-radius: 3px;
-  padding: 8px 18px;
-  color: #000000;
-  cursor: pointer;
-  background: #8e898912;
-  text-transform: uppercase;
-  font-size: 13px;
-  letter-spacing: .5px;
+  max-width: 600px;
+  padding: 2rem;
 }
-button.vehicleDetails__modal--btn.close {
+.modal-header h3 {
+  text-transform: uppercase;
+}
+.modal-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 22px 0 10px;
+}
+.modal-body p {
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: gray;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}
+.modal-close-button {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+  color: #333;
+  opacity: 0.8;
+  cursor: pointer;
+  border: none;
   position: absolute;
   top: 0;
   right: 0;
+  text-align: right;
   background: transparent;
-  padding: 20px;
 }
 
+button {
+  font-size: .9rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  padding: .3rem 1rem;
+  margin-left: .5rem;
+}
+//***************
 
 @media (min-width: 768px) {
   .container {
